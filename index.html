@@ -78,7 +78,7 @@
               <a class="nav-link btn  btn-block add" href="#exampleModal"  data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-plus"></i> Add Place</a>
             </li>
             <li class="nav-item">
-              <a class=" nav-link btn btn-warning btn-block add3" href="#"><i class="fas fa-shopping-cart"></i> Sell</a>
+              <a class=" nav-link btn btn-warning btn-block add3" href="#sellModal"  data-bs-toggle="modal" data-bs-target="#sellModal"><i class="fas fa-shopping-cart"></i> Sell</a>
             </li>
           </ul>
         </div>
@@ -92,74 +92,63 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
       <form>
         <!-- Email input -->
+        <label class="form-label" for="form2Example1">Email address</label>
         <div class="form-outline mb-4">
-          <input type="email" id="form2Example1" class="form-control" />
-          <label class="form-label" for="form2Example1">Email address</label>
+          <input type="email" id="form2Example1" class="form-control" aria-describedby="inputGroupPrepend2" required/>
+          
         </div>
-      
+       
         <!-- Password input -->
         <div class="form-outline mb-4">
-          <input type="password" id="form2Example2" class="form-control" />
           <label class="form-label" for="form2Example2">Password</label>
+          <input type="password" id="form2Example2" class="form-control" aria-describedby="inputGroupPrepend2" required/>
+          
         </div>
       
         <!-- 2 column grid layout for inline styling -->
         <div class="row mb-4">
           <div class="col d-flex justify-content-center">
-            <!-- Checkbox -->
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value=""
-                id="form2Example3"
-                checked
-              />
-              <label class="form-check-label" for="form2Example3"> Remember me </label>
-            </div>
+           
           </div>
       
-          <div class="col">
+          <div class="col text-color">
             <!-- Simple link -->
             <a href="#!">Forgot password?</a>
           </div>
         </div>
+        
       
         <!-- Submit button -->
-        <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+        <div class="d-grid gap-2">
+          <button type="submit" class="btn btn-warning btn-block mb-4 add3" type="button">Sign In</button>
+         </div>
       
         <!-- Register buttons -->
-        <div class="text-center">
-          <p>Not a member? <a href="#!">Register</a></p>
+        <div class="text-center text-color">
+          <p>Not a member? <a href="" data-bs-target="#modal2" data-bs-toggle="modal" data-bs-dismiss="modal">Register</a></p>
           <p>or sign up with:</p>
-          <button type="button" class="btn btn-primary btn-floating mx-1">
+          <button type="button" class="btn btn-warning btn-floating mx-1">
             <i class="fab fa-facebook-f"></i>
           </button>
       
-          <button type="button" class="btn btn-primary btn-floating mx-1">
+          <button type="button" class="btn btn-warning btn-floating mx-1 text-color">
             <i class="fab fa-google"></i>
           </button>
       
-          <button type="button" class="btn btn-primary btn-floating mx-1">
+          <button type="button" class="btn btn-warning btn-floating mx-1">
             <i class="fab fa-twitter"></i>
           </button>
-      
-          <button type="button" class="btn btn-primary btn-floating mx-1">
-            <i class="fab fa-github"></i>
-          </button>
+    
         </div>
       </form>
       </div>
-      <div class="modal-footer">
-        <!-- Toogle to second dialog -->
-        <button class="btn btn-primary" data-bs-target="#modal2" data-bs-toggle="modal" data-bs-dismiss="modal">Open #modal2</button>
-      </div>
+      
     </div>
   </div>
 </div>
@@ -168,7 +157,7 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Sign Up </h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -177,28 +166,34 @@
         <div class="row mb-4">
           <div class="col">
             <div class="form-outline">
-              <input type="text" id="form3Example1" class="form-control" />
               <label class="form-label" for="form3Example1">First name</label>
+              <input type="text" id="form3Example1" class="form-control" aria-describedby="inputGroupPrepend2" required />
+              
             </div>
           </div>
           <div class="col">
             <div class="form-outline">
-              <input type="text" id="form3Example2" class="form-control" />
               <label class="form-label" for="form3Example2">Last name</label>
+              <input type="text" id="form3Example2" class="form-control" />
+             
             </div>
           </div>
         </div>
       
         <!-- Email input -->
-        <div class="form-outline mb-4">
-          <input type="email" id="form3Example3" class="form-control" />
-          <label class="form-label" for="form3Example3">Email address</label>
-        </div>
+         <!-- Email input -->
+         <label class="form-label" for="form2Example1">Email address</label>
+         <div class="form-outline mb-4">
+           <input type="email" id="form2Example1" class="form-control" aria-describedby="inputGroupPrepend2" required/>
+           
+         </div>
+        
       
         <!-- Password input -->
         <div class="form-outline mb-4">
-          <input type="password" id="form3Example4" class="form-control" />
           <label class="form-label" for="form3Example4">Password</label>
+          <input type="password" id="form3Example4" class="form-control" aria-describedby="inputGroupPrepend2" required />
+          
         </div>
       
         <!-- Checkbox -->
@@ -216,26 +211,25 @@
         </div>
       
         <!-- Submit button -->
-        <button type="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
+        <div class="d-grid gap-2">
+          <button type="submit" class="btn btn-warning btn-block mb-4 add3" type="button">Sign Up</button>
+         </div>
       
         <!-- Register buttons -->
         <div class="text-center">
           <p>or sign up with:</p>
-          <button type="button" class="btn btn-primary btn-floating mx-1">
+          <button type="button" class="btn btn-warning btn-floating mx-1 text-color">
             <i class="fab fa-facebook-f"></i>
           </button>
       
-          <button type="button" class="btn btn-primary btn-floating mx-1">
+          <button type="button" class="btn btn-warning btn-floating mx-1 text-color">
             <i class="fab fa-google"></i>
           </button>
       
-          <button type="button" class="btn btn-primary btn-floating mx-1">
+          <button type="button" class="btn btn-warning btn-floating mx-1 text-color">
             <i class="fab fa-twitter"></i>
           </button>
-      
-          <button type="button" class="btn btn-primary btn-floating mx-1">
-            <i class="fab fa-github"></i>
-          </button>
+    
         </div>
       </form>
       </div>
@@ -246,28 +240,237 @@
     </div>
   </div>
 </div>
-<!-- Open first dialog -->
-<a class="btn btn-primary" data-bs-toggle="modal" href="#modal" role="button">Open #modal</a>
 
-<!-- add place modal  --><!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
 
+
+<!-- add place moadal  -->
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add PLace</h5>
+        <h5 class="modal-title text-color" id="exampleModalLabel">Add Place</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ..
+        <form class="row g-3">
+          <div class="col-md-12">
+            <label for="validationServer01" class="form-label">Place Name*</label>
+            <input type="text" class="form-control " id="validationServer01" value="" required>
+            
+          </div>
+          <div class="form-group">
+            <label for="phone_no">Phone Number</label>
+            <input type="tel" name="num" data-validation="number" data-validation-allowing="negative,number" input name="color" data-validation="number" datavalidation-ignore="$"  class="form-control" id="phone_no" placeholder="" required/>
+    
+          </div>
+          
+          <div class="col-md-6">
+            <label for="validationServer03" class="form-label">Area</label>
+            <input type="text" class="form-control" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+          </div>
+          <div class="col-md-6">
+            <label for="validationServer03" class="form-label">City</label>
+            <input type="text" class="form-control" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+           
+          </div>
+          <div class="col-md-6">
+            <label for="validationServer04" class="form-label">State</label>
+            <select class="form-select" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+              <option selected disabled value="">Choose...</option>
+              <option>Jharkhand</option>
+            </select>
+            
+          </div>
+          <div class="col-md-6">
+            <label for="validationServer05" class="form-label">Zip</label>
+            <input type="text" class="form-control" id="validationServer05" aria-describedby="validationServer05Feedback" required>
+            
+          </div>
+          <div class="mb-3">
+            <label for="validationTextarea" class="form-label">Description</label>
+            <textarea class="form-control" id="validationTextarea" placeholder="" required></textarea>
+           
+          </div>
+          <div class="col-md-6">
+            <label for="validationDefaultUsername" class="form-label">Select Category</label>
+            <select class="form-select" required aria-label="select example">
+              <option value="">-Category-</option>
+              <option value="1">Lodge</option>
+              <option value="2">Mess</option>
+              <option value="3">Three</option>
+            </select>
+            
+          </div>
+
+          
+         
+          <div class="col-md-6">
+            <label for="validationDefaultUsername" class="form-label">Choose Image</label>
+            <input type="file" class="form-control" aria-label="file example">
+            
+          </div>
+
+          <div class="col-md-12">
+            <label for="validationDefaultUsername" class="form-label">Rent</label>
+            <div class="input-group">
+              <span class="input-group-text" id="inputGroupPrepend2">₹</span>
+              <input type="texts" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+            </div>
+          </div>
+
+          <!-- facilies chexk box  -->
+          <label for="validationDefaultUsername" class="form-label">Facities</label>
+          <div class="col-lg-4">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Bed</label>
+          </div>
+          <div class="col-lg-4">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Table</label>
+          </div>
+          <div class="col-lg-4">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Chair</label>
+          </div>
+
+          <div class="col-lg-4">
+             <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Invertor</label>
+          </div>
+          <div class="col-lg-4">
+          
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Fan</label>
+          </div>
+          <div class="col-lg-4">
+          
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Wifi</label>
+          </div>
+  
+        
+
+          
+          
+          <div class="col-12">
+            <div class="form-check was-validated">
+              <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+              <label class="form-check-label text-color" for="invalidCheck3">
+                Agree to terms and conditions
+              </label>
+              
+            </div>
+          </div>
+
+        
+    
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button class="btn btn-warning was-validated" type="submit">Submit form</button>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- sell modal  -->
+
+<!-- Modal -->
+<div class="modal fade" id="sellModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-color" id="sellModalLabel">Sell Your Product</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="row g-3">
+          <div class="col-md-12">
+            <label for="validationServer01" class="form-label">Product Name*</label>
+            <input type="text" class="form-control " id="validationServer01" value="" required>
+            
+          </div>
+          <div class="form-group">
+            <label for="phone_no"> Seller Phone Number</label>
+            <input type="tel" name="num" data-validation="number" data-validation-allowing="negative,number" input name="color" data-validation="number" datavalidation-ignore="$"  class="form-control" id="phone_no" placeholder="" required/>
+    
+          </div>
+          
+          <div class="col-md-6">
+            <label for="validationServer03" class="form-label">Area</label>
+            <input type="text" class="form-control" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+          </div>
+          <div class="col-md-6">
+            <label for="validationServer03" class="form-label">City</label>
+            <input type="text" class="form-control" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+           
+          </div>
+          <div class="col-md-6">
+            <label for="validationServer04" class="form-label">State</label>
+            <select class="form-select" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+              <option selected disabled value="">Choose...</option>
+              <option>Jharkhand</option>
+            </select>
+            
+          </div>
+          <div class="col-md-6">
+            <label for="validationServer05" class="form-label">Zip</label>
+            <input type="text" class="form-control" id="validationServer05" aria-describedby="validationServer05Feedback" required>
+            
+          </div>
+          <div class="mb-3">
+            <label for="validationTextarea" class="form-label">About Product</label>
+            <textarea class="form-control" id="validationTextarea" placeholder="" required></textarea>
+           
+          </div>
+          <div class="col-md-6">
+            <label for="validationselect" class="form-label">Choose Category</label>
+            <select class="form-select" required aria-label="select example">
+              <option value="">-Category-</option>
+              <option value="1">Drafter</option>
+              <option value="2">Sheetbox</option>
+              <option value="3">Drawing Board</option>
+              <option value="4">Books</option>
+              <option value="5">Notes</option>
+              <option value="5">Uniform</option>
+              <option value="6">Other</option>
+            </select>
+            
+          </div>
+          <div class="col-md-6">
+            <label for="validationselect" class="form-label">Product Image</label>
+              <input type="file" class="form-control" aria-label="file example" required>
+            
+          </div>
+
+          <div class="col-md-6">
+            <label for="validationDefaultUsername" class="form-label">Price</label>
+            <div class="input-group">
+              <span class="input-group-text" id="inputGroupPrepend2">₹</span>
+              <input type="texts" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+            </div>
+          </div>
+         
+          
+          <div class="col-12">
+            <div class="form-check was-validated">
+              <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+              <label class="form-check-label text-color" for="invalidCheck3">
+                Agree to terms and conditions
+              </label>
+              
+            </div>
+          </div>
+
+        
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button class="btn btn-warning was-validated" type="submit">Submit form</button>
+      </form>
       </div>
     </div>
   </div>
@@ -300,6 +503,8 @@
     </div>
     </div>
     </div>
+
+    
     
 
   <!-- categories -->
@@ -539,7 +744,7 @@
               alt="..." style="height: 210px"
             />
             <div class="card-body">
-             <a href="#" class=" link11"><h5 class="card-title">Wasim Mess</h5></a> 
+             <a href="mess.html" class=" link11"><h5 class="card-title">Wasim Mess</h5></a> 
               <p class="card-text">
                 
               </p>
@@ -587,8 +792,10 @@
     </div>
 
     <center>
+      <a href="mess.html">
       <button type="button" class="btn btn-warning btn-lg mt-5 btn11">Load More <i class="fas fa-angle-double-right"></i></button>
     </center>
+  </a>
   
   
   
@@ -987,6 +1194,7 @@
     <!-- Option 1: Bootstrap Bundle with Popper -->
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
 
   </body>
 </html>
