@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Student Help Desk | About</title>
+    <title>Student Help Desk</title>
 
     <!-- css -->
     <link rel="stylesheet" href="css/style.css">
@@ -32,12 +32,13 @@
 <link rel="icon" type="image/png" sizes="512x512" href="image/favicon/android-chrome-512x512.png">
 <link rel="manifest" href="image/favicon/site.webmanifest">
 
+
   </head>
   <body>
 
     <!-- nav-bar -->
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid container">
         <a class="navbar-brand" href="#"><i class="fas fa-user-graduate"></i>  SHD<span id="dot">.</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,10 +47,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#">About</a>
+              <a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -71,242 +72,1014 @@
 
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link  btn  btn-block  add2" href="#"> Login <i class="fas fa-sign-in-alt"></i> </a>
+              <a class="nav-link  btn  btn-block  add2"  href="#modal" data-bs-toggle="modal"> Login <i class="fas fa-sign-in-alt"></i> </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link btn  btn-block add" href="#"><i class="fas fa-plus"></i> Add Place</a>
+              <a class="nav-link btn  btn-block add" href="#exampleModal"  data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-plus"></i> Add Place</a>
             </li>
             <li class="nav-item">
-              <a class=" nav-link btn btn-warning btn-block add3" href="#"><i class="fas fa-shopping-cart"></i> Sell</a>
+              <a class=" nav-link btn btn-warning btn-block add3" href="#sellModal"  data-bs-toggle="modal" data-bs-target="#sellModal"><i class="fas fa-shopping-cart"></i> Sell</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
   </div>
+<!-- login modal  -->
 
-
-
-
-<!-- jumbotrons  -->
-<div class="jumbotron jumbotron-fluid bg-cover text-white" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%),
- url(image/Team/people-4386248.png)">
-  <div class="container">
-    <h1 class="display-4 text-center jumbotext">Our Team <span id="dot">M</span>embers<span id="dot">.</span></h1>
+<!-- First modal dialog -->
+<div class="modal fade" id="modal" aria-hidden="true" aria-labelledby="..." tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <form>
+        <!-- Email input -->
+        <label class="form-label" for="form2Example1">Email address</label>
+        <div class="form-outline mb-4">
+          <input type="email" id="form2Example1" class="form-control" aria-describedby="inputGroupPrepend2" required/>
+          
+        </div>
+       
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form2Example2">Password</label>
+          <input type="password" id="form2Example2" class="form-control" aria-describedby="inputGroupPrepend2" required/>
+          
+        </div>
+      
+        <!-- 2 column grid layout for inline styling -->
+        <div class="row mb-4">
+          <div class="col d-flex justify-content-center">
+           
+          </div>
+      
+          <div class="col text-color">
+            <!-- Simple link -->
+            <a href="#!">Forgot password?</a>
+          </div>
+        </div>
+        
+      
+        <!-- Submit button -->
+        <div class="d-grid gap-2">
+          <button type="submit" class="btn btn-warning btn-block mb-4 add3" type="button">Sign In</button>
+         </div>
+      
+        <!-- Register buttons -->
+        <div class="text-center text-color">
+          <p>Not a member? <a href="" data-bs-target="#modal2" data-bs-toggle="modal" data-bs-dismiss="modal">Register</a></p>
+          <p>or sign up with:</p>
+          <button type="button" class="btn btn-warning btn-floating mx-1">
+            <i class="fab fa-facebook-f"></i>
+          </button>
+      
+          <button type="button" class="btn btn-warning btn-floating mx-1 text-color">
+            <i class="fab fa-google"></i>
+          </button>
+      
+          <button type="button" class="btn btn-warning btn-floating mx-1">
+            <i class="fab fa-twitter"></i>
+          </button>
     
+        </div>
+      </form>
+      </div>
+      
+    </div>
   </div>
+</div>
+<!-- Second modal dialog -->
+<div class="modal fade" id="modal2" aria-hidden="true" aria-labelledby="..." tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Sign Up </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <form>
+        <!-- 2 column grid layout with text inputs for the first and last names -->
+        <div class="row mb-4">
+          <div class="col">
+            <div class="form-outline">
+              <label class="form-label" for="form3Example1">First name</label>
+              <input type="text" id="form3Example1" class="form-control" aria-describedby="inputGroupPrepend2" required />
+              
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-outline">
+              <label class="form-label" for="form3Example2">Last name</label>
+              <input type="text" id="form3Example2" class="form-control" />
+             
+            </div>
+          </div>
+        </div>
+      
+        <!-- Email input -->
+         <!-- Email input -->
+         <label class="form-label" for="form2Example1">Email address</label>
+         <div class="form-outline mb-4">
+           <input type="email" id="form2Example1" class="form-control" aria-describedby="inputGroupPrepend2" required/>
+           
+         </div>
+        
+      
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form3Example4">Password</label>
+          <input type="password" id="form3Example4" class="form-control" aria-describedby="inputGroupPrepend2" required />
+          
+        </div>
+      
+        <!-- Checkbox -->
+        <div class="form-check d-flex justify-content-center mb-4">
+          <input
+            class="form-check-input me-2"
+            type="checkbox"
+            value=""
+            id="form2Example3"
+            checked
+          />
+          <label class="form-check-label" for="form2Example3">
+            Subscribe to our newsletter
+          </label>
+        </div>
+      
+        <!-- Submit button -->
+        <div class="d-grid gap-2">
+          <button type="submit" class="btn btn-warning btn-block mb-4 add3" type="button">Sign Up</button>
+         </div>
+      
+        <!-- Register buttons -->
+        <div class="text-center">
+          <p>or sign up with:</p>
+          <button type="button" class="btn btn-warning btn-floating mx-1 text-color">
+            <i class="fab fa-facebook-f"></i>
+          </button>
+      
+          <button type="button" class="btn btn-warning btn-floating mx-1 text-color">
+            <i class="fab fa-google"></i>
+          </button>
+      
+          <button type="button" class="btn btn-warning btn-floating mx-1 text-color">
+            <i class="fab fa-twitter"></i>
+          </button>
+    
+        </div>
+      </form>
+      </div>
+      <div class="modal-footer">
+        <!-- Toogle to first dialog, `data-bs-dismiss` attribute can be omitted - clicking on link will close dialog anyway -->
+        <a class="btn btn-primary" href="#modal" data-bs-toggle="modal" role="button">Open #modal</a>
+      </div>
+    </div>
   </div>
+</div>
 
-  <!-- team  -->
-  <section class="bgcolor">
+
+
+<!-- add place moadal  -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-color" id="exampleModalLabel">Add Place</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="row g-3">
+          <div class="col-md-12">
+            <label for="validationServer01" class="form-label">Place Name*</label>
+            <input type="text" class="form-control " id="validationServer01" value="" required>
+            
+          </div>
+          <div class="form-group">
+            <label for="phone_no">Phone Number</label>
+            <input type="tel" name="num" data-validation="number" data-validation-allowing="negative,number" input name="color" data-validation="number" datavalidation-ignore="$"  class="form-control" id="phone_no" placeholder="" required/>
+    
+          </div>
+          
+          <div class="col-md-6">
+            <label for="validationServer03" class="form-label">Area</label>
+            <input type="text" class="form-control" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+          </div>
+          <div class="col-md-6">
+            <label for="validationServer03" class="form-label">City</label>
+            <input type="text" class="form-control" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+           
+          </div>
+          <div class="col-md-6">
+            <label for="validationServer04" class="form-label">State</label>
+            <select class="form-select" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+              <option selected disabled value="">Choose...</option>
+              <option>Jharkhand</option>
+            </select>
+            
+          </div>
+          <div class="col-md-6">
+            <label for="validationServer05" class="form-label">Zip</label>
+            <input type="text" class="form-control" id="validationServer05" aria-describedby="validationServer05Feedback" required>
+            
+          </div>
+          <div class="mb-3">
+            <label for="validationTextarea" class="form-label">Description</label>
+            <textarea class="form-control" id="validationTextarea" placeholder="" required></textarea>
+           
+          </div>
+          <div class="col-md-6">
+            <label for="validationDefaultUsername" class="form-label">Select Category</label>
+            <select class="form-select" required aria-label="select example">
+              <option value="">-Category-</option>
+              <option value="1">Lodge</option>
+              <option value="2">Mess</option>
+              <option value="3">Three</option>
+            </select>
+            
+          </div>
+
+          
+         
+          <div class="col-md-6">
+            <label for="validationDefaultUsername" class="form-label">Choose Image</label>
+            <input type="file" class="form-control" aria-label="file example">
+            
+          </div>
+
+          <div class="col-md-12">
+            <label for="validationDefaultUsername" class="form-label">Rent</label>
+            <div class="input-group">
+              <span class="input-group-text" id="inputGroupPrepend2">₹</span>
+              <input type="texts" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+            </div>
+          </div>
+
+          <!-- facilies chexk box  -->
+          <label for="validationDefaultUsername" class="form-label">Facities</label>
+          <div class="col-lg-4">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Bed</label>
+          </div>
+          <div class="col-lg-4">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Table</label>
+          </div>
+          <div class="col-lg-4">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Chair</label>
+          </div>
+
+          <div class="col-lg-4">
+             <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Invertor</label>
+          </div>
+          <div class="col-lg-4">
+          
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Fan</label>
+          </div>
+          <div class="col-lg-4">
+          
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Wifi</label>
+          </div>
+  
+        
+
+          
+          
+          <div class="col-12">
+            <div class="form-check was-validated">
+              <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+              <label class="form-check-label text-color" for="invalidCheck3">
+                Agree to terms and conditions
+              </label>
+              
+            </div>
+          </div>
+
+        
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button class="btn btn-warning was-validated" type="submit">Submit form</button>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- sell modal  -->
+
+<!-- Modal -->
+<div class="modal fade" id="sellModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-color" id="sellModalLabel">Sell Your Product</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="row g-3">
+          <div class="col-md-12">
+            <label for="validationServer01" class="form-label">Product Name*</label>
+            <input type="text" class="form-control " id="validationServer01" value="" required>
+            
+          </div>
+          <div class="form-group">
+            <label for="phone_no"> Seller Phone Number</label>
+            <input type="tel" name="num" data-validation="number" data-validation-allowing="negative,number" input name="color" data-validation="number" datavalidation-ignore="$"  class="form-control" id="phone_no" placeholder="" required/>
+    
+          </div>
+          
+          <div class="col-md-6">
+            <label for="validationServer03" class="form-label">Area</label>
+            <input type="text" class="form-control" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+          </div>
+          <div class="col-md-6">
+            <label for="validationServer03" class="form-label">City</label>
+            <input type="text" class="form-control" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+           
+          </div>
+          <div class="col-md-6">
+            <label for="validationServer04" class="form-label">State</label>
+            <select class="form-select" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+              <option selected disabled value="">Choose...</option>
+              <option>Jharkhand</option>
+            </select>
+            
+          </div>
+          <div class="col-md-6">
+            <label for="validationServer05" class="form-label">Zip</label>
+            <input type="text" class="form-control" id="validationServer05" aria-describedby="validationServer05Feedback" required>
+            
+          </div>
+          <div class="mb-3">
+            <label for="validationTextarea" class="form-label">About Product</label>
+            <textarea class="form-control" id="validationTextarea" placeholder="" required></textarea>
+           
+          </div>
+          <div class="col-md-6">
+            <label for="validationselect" class="form-label">Choose Category</label>
+            <select class="form-select" required aria-label="select example">
+              <option value="">-Category-</option>
+              <option value="1">Drafter</option>
+              <option value="2">Sheetbox</option>
+              <option value="3">Drawing Board</option>
+              <option value="4">Books</option>
+              <option value="5">Notes</option>
+              <option value="5">Uniform</option>
+              <option value="6">Other</option>
+            </select>
+            
+          </div>
+          <div class="col-md-6">
+            <label for="validationselect" class="form-label">Product Image</label>
+              <input type="file" class="form-control" aria-label="file example" required>
+            
+          </div>
+
+          <div class="col-md-6">
+            <label for="validationDefaultUsername" class="form-label">Price</label>
+            <div class="input-group">
+              <span class="input-group-text" id="inputGroupPrepend2">₹</span>
+              <input type="texts" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+            </div>
+          </div>
+         
+          
+          <div class="col-12">
+            <div class="form-check was-validated">
+              <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+              <label class="form-check-label text-color" for="invalidCheck3">
+                Agree to terms and conditions
+              </label>
+              
+            </div>
+          </div>
+
+        
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button class="btn btn-warning was-validated" type="submit">Submit form</button>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- hero-section  -->
+  <div class="hero">
   <div class="container">
     <div class="row">
-        <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
-            <div class="mt-4 pt-2">
-                <div class="team position-relative d-block text-center">
-                    <div class="image position-relative d-block overflow-hidden">
-                        <img src="image/Team/ankita.jpeg" class="img-fluid rounded" alt="">
-                        <div class="overlay rounded bg-dark"></div>
-                    </div>
-                    <div class="content py-2 member-position bg-white border-bottom overflow-hidden rounded d-inline-block">
-                        <h4 class="title mb-0">Ankita Kumari</h4>
-                        <small class="text-muted">CS/013/18</small>
-                    </div>
-                    <ul class="list-unstyled team-social social-icon social mb-0">
-                      <li class="list-inline-item"><a href="#" class="rounded"><i class="fab fa-facebook" title="Facebook"></i></a></li>
-                        <li class="list-inline-item"><a href="#" class="rounded"><i class="fab fa-instagram" title="Instagram"></i></a></li>
-                    </ul><!--end icon-->
-                </div>
-            </div>
-        </div><!--end col-->
-        
-        <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
-            <div class="mt-4 pt-2">
-                <div class="team position-relative d-block text-center">
-                    <div class="image position-relative d-block overflow-hidden">
-                        <img src="image/Team/aryan1.jpeg" class="img-fluid rounded" alt="">
-                        <div class="overlay rounded bg-dark"></div>
-                    </div>
-                    <div class="content py-2 member-position bg-white border-bottom overflow-hidden rounded d-inline-block">
-                        <h4 class="title mb-0">Aryan Naresh</h4>
-                        <small class="text-muted">CS/014/18</small>
-                    </div>
-                    <ul class="list-unstyled team-social social-icon social mb-0">
-                        <li class="list-inline-item"><a href="#" class="rounded"><i class="fab fa-facebook" title="Facebook"></i></a></li>
-                        <li class="list-inline-item"><a href="#" class="rounded"><i class="fab fa-instagram" title="Instagram"></i></a></li>
+      <div class="col-lg-6">
+        <div class="herocontent">
+          <h1>Student Help Desk <span id="dot">.</span>
+            
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="basic-addon2">
+              <div class="input-group-append text-form">
+                
+                <button class="btn btn-warning" type="button"><i class="fas fa-search btn-p"></i></button>
+  
+              </div>
+
+          </h1>
+   
+</div>
+         
+        </div>
+         
+
+    </div>
+    </div>
+    </div>
+
+    
+    
+
+  <!-- categories -->
+  <section class="bgcolor">
+    <div class="container">
+      <div class="lodge">
+        <h1 class="text-center">Categor<span id="dot1">y</span> <i class="fas fa-filter"></i></h1>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card card11">
+            <a href="lodge.html" class="link11 nav-link">
+            <img
+              src="image/svg/double-bed.svg"
+              class="card-img-top img11"
+              alt="..." 
+            />
+            <div class="card-body">
+              <h5 class="card-title text-center">Lodge/PG</h5>
              
-                    </ul><!--end icon-->
-                </div>
             </div>
-        </div><!--end col-->
+          </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card11">
+            <a href="" class="link11 nav-link">
+            <img
+            src="image/svg/healthy-eating.svg"
+            class="card-img-top img11 "
+            alt="..."
+          />
+            <div class="card-body">
+              <h5 class="card-title text-center">Mess</h5>
+             
+            </div>
+          </a>
+          </div>
+        </div>
         
-        <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
-            <div class="mt-4 pt-2">
-                <div class="team position-relative d-block text-center">
-                    <div class="image position-relative d-block overflow-hidden">
-                        <img src="image/Team/ashutosh.jpeg" class="img-fluid rounded" alt="">
-                        <div class="overlay rounded bg-dark"></div>
-                    </div>
-                    <div class="content py-2 member-position bg-white border-bottom overflow-hidden rounded d-inline-block">
-                        <h4 class="title mb-0">Ashutosh Parsad Soni</h4>
-                        <small class="text-muted"><b><span id="dot">T</span>eam <span id="dot">L</span>eader</small></b><br>
-                        <small class="text-muted">CS/015/18</small>
-                    </div>
-                    <ul class="list-unstyled team-social social-icon social mb-0">
-                      <li class="list-inline-item"><a href="#" class="rounded"><i class="fab fa-facebook" title="Facebook"></i></a></li>
-                      <li class="list-inline-item"><a href="#" class="rounded"><i class="fab fa-instagram" title="Instagram"></i></a></li>
-                    </ul><!--end icon-->
-                </div>
+        <div class="col">
+          <div class="card card11">
+            <a href="mess.html" class="link11 nav-link">
+            <img
+            src="image/svg/water-bottle.svg"
+            class="card-img-top img11"
+            alt="..." 
+          />
+            <div class="card-body">
+              <h5 class="card-title text-center">Water</h5>
+             
             </div>
-        </div><!--end col-->
-        
-        <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
-            <div class="mt-4 pt-2">
-                <div class="team position-relative d-block text-center">
-                    <div class="image position-relative d-block overflow-hidden">
-                        <img src="image/Team/ayisha.jpeg" class="img-fluid rounded" alt="">
-                        <div class="overlay rounded bg-dark"></div>
-                    </div>
-                    <div class="content py-2 member-position bg-white border-bottom overflow-hidden rounded d-inline-block">
-                        <h4 class="title mb-0">Ayisha Siddiqua</h4>
-                        <small class="text-muted">CS/016/18</small>
-                    </div>
-                    <ul class="list-unstyled team-social social-icon social mb-0">
-                        <li class="list-inline-item"><a href="#" class="rounded"><i class="fab fa-facebook" title="Facebook"></i></a></li>
-                        <li class="list-inline-item"><a href="#" class="rounded"><i class="fab fa-instagram" title="Instagram"></i></a></li>
-                    </ul><!--end icon-->
-                </div>
-            </div>
-        </div><!--end col-->
-        <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
-          <div class="mt-4 pt-2">
-              <div class="team position-relative d-block text-center">
-                  <div class="image position-relative d-block overflow-hidden">
-                      <img src="image/Team/javed.jpeg" class="img-fluid rounded" alt="">
-                      <div class="overlay rounded bg-dark"></div>
-                  </div>
-                  <div class="content py-2 member-position bg-white border-bottom overflow-hidden rounded d-inline-block">
-                      <h4 class="title mb-0">Javed Ali</h4>
-                      <small class="text-muted">CS/028/18</small>
-                  </div>
-                  <ul class="list-unstyled team-social social-icon social mb-0">
-                    <li class="list-inline-item"><a href="#" class="rounded"><i class="fab fa-facebook" title="Facebook"></i></a></li>
-                      <li class="list-inline-item"><a href="#" class="rounded"><i class="fab fa-instagram" title="Instagram"></i></a></li>
-                  </ul><!--end icon-->
-              </div>
+            </a>
           </div>
-      </div><!--end col-->
-      
-      <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
-          <div class="mt-4 pt-2">
-              <div class="team position-relative d-block text-center">
-                  <div class="image position-relative d-block overflow-hidden">
-                      <img src="image/Team/masum.jpeg" class="img-fluid rounded" alt="">
-                      <div class="overlay rounded bg-dark"></div>
-                  </div>
-                  <div class="content py-2 member-position bg-white border-bottom overflow-hidden rounded d-inline-block">
-                      <h4 class="title mb-0">Masum Raza</h4>
-                      <small class="text-muted">CS/032/18</small>
-                  </div>
-                  <ul class="list-unstyled team-social social-icon social mb-0">
-                      <li class="list-inline-item"><a href="#" class="rounded"><i class="fab fa-facebook" title="Facebook"></i></a></li>
-                      <li class="list-inline-item"><a href="#" class="rounded"><i class="fab fa-instagram" title="Instagram"></i></a></li>
-           
-                  </ul><!--end icon-->
-              </div>
-          </div>
-      </div><!--end col-->
-      
-      <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
-          <div class="mt-4 pt-2">
-              <div class="team position-relative d-block text-center">
-                  <div class="image position-relative d-block overflow-hidden">
-                      <img src="image/Team/afridi.jpeg" class="img-fluid rounded" alt="">
-                      <div class="overlay rounded bg-dark"></div>
-                  </div>
-                  <div class="content py-2 member-position bg-white border-bottom overflow-hidden rounded d-inline-block">
-                      <h4 class="title mb-0">MD Afridi</h4>
-                      <small class="text-muted">CS/035/18</small>
-                  </div>
-                  <ul class="list-unstyled team-social social-icon social mb-0">
-                    <li class="list-inline-item"><a href="#" class="rounded"><i class="fab fa-facebook" title="Facebook"></i></a></li>
-                    <li class="list-inline-item"><a href="#" class="rounded"><i class="fab fa-instagram" title="Instagram"></i></a></li>
-                  </ul><!--end icon-->
-              </div>
-          </div>
-      </div><!--end col-->
-      
-      <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
-          <div class="mt-4 pt-2">
-              <div class="team position-relative d-block text-center">
-                  <div class="image position-relative d-block overflow-hidden">
-                      <img src="image/Team/ali imam.jpeg" class="img-fluid rounded" alt="">
-                      <div class="overlay rounded bg-dark"></div>
-                  </div>
-                  <div class="content py-2 member-position bg-white border-bottom overflow-hidden rounded d-inline-block">
-                      <h4 class="title mb-0">MD Ali Imam</h4>
-                      <small class="text-muted">CS/036/18</small>
-                  </div>
-                  <ul class="list-unstyled team-social social-icon social mb-0">
-                      <li class="list-inline-item"><a href="#" class="rounded"><i class="fab fa-facebook" title="Facebook"></i></a></li>
-                      <li class="list-inline-item"><a href="#" class="rounded"><i class="fab fa-instagram" title="Instagram"></i></a></li>
-                  </ul><!--end icon-->
-              </div>
-          </div>
-          </div><!--end col-->
-          <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
-            <div class="mt-4 pt-2">
-                <div class="team position-relative d-block text-center">
-                    <div class="image position-relative d-block overflow-hidden">
-                        <img src="image/Team/faiyaz.jpeg" class="img-fluid rounded" alt="">
-                        <div class="overlay rounded bg-dark"></div>
-                    </div>
-                    <div class="content py-2 member-position bg-white border-bottom overflow-hidden rounded d-inline-block">
-                        <h4 class="title mb-0">MD Faiyaz</h4>
-                        <small class="text-muted">CS/038/18</small>
-                    </div>
-                    <ul class="list-unstyled team-social social-icon social mb-0">
-                        <li class="list-inline-item"><a href="#" class="rounded"><i class="fab fa-facebook" title="Facebook"></i></a></li>
-                        <li class="list-inline-item"><a href="#" class="rounded"><i class="fab fa-instagram" title="Instagram"></i></a></li>
-                    </ul><!--end icon-->
-                </div>
-            </div>
-            </div><!--end col-->
-            <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
-              <div class="mt-4 pt-2">
-                  <div class="team position-relative d-block text-center">
-                      <div class="image position-relative d-block overflow-hidden">
-                          <img src="image/Team/mimshad.jpeg" class="img-fluid rounded" alt="">
-                          <div class="overlay rounded bg-dark"></div>
-                      </div>
-                      <div class="content py-2 member-position bg-white border-bottom overflow-hidden rounded d-inline-block">
-                          <h4 class="title mb-0">Md Mimshad</h4>
-                          <small class="text-muted">CS/039/18</small>
-                      </div>
-                      <ul class="list-unstyled team-social social-icon social mb-0">
-                          <li class="list-inline-item"><a href="#" class="rounded"><i class="fab fa-facebook" title="Facebook"></i></a></li>
-                          <li class="list-inline-item"><a href="#" class="rounded"><i class="fab fa-instagram" title="Instagram"></i></a></li>
-                      </ul><!--end icon-->
-                  </div>
-              </div>
-              </div><!--end col-->
-    </div><!--end row-->
-    
-</div>
+        </div>
 
+        <div class="col">
+          <div class="card card11">
+            <a href="" class="link11 nav-link">
+            <img
+            src="image/svg/stationery.svg"
+            class="card-img-top img11"
+            alt="..." 
+          />
+            <div class="card-body">
+              <h5 class="card-title text-center">Stationery</h5>
+              
+            </div>
+          </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card11">
+            <a href="" class="link11 nav-link">
+            <img
+            src="image/svg/food-store (1).svg"
+            class="card-img-top img11 "
+            alt="..." 
+          />
+            <div class="card-body">
+              <h5 class="card-title text-center">Hotel</h5>
+             
+            </div>
+          </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card11">
+            <a href="" class="link11 nav-link">
+            <img
+            src="image/svg/buy.svg"
+            class="card-img-top img11"
+            alt="..."
+          />
+            <div class="card-body">
+              <h5 class="card-title text-center">Buy</h5>
+             
+            </div>
+          </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card11">
+            <a href="" class="link11 nav-link">
+            <img
+            src="image/svg/girl.svg"
+            class="card-img-top img11 "
+            alt="..."
+          />
+            <div class="card-body">
+              <h5 class="card-title text-center">Girl PG</h5>
+             
+            </div>
+          </a>
+          </div>
+        </div>
+        
+        <div class="col">
+          <div class="card card11">
+            <a href="" class="link11 nav-link">
+            <img
+            src="image/svg/pharmacy.svg"
+            class="card-img-top img11"
+            alt="..." 
+          />
+            <div class="card-body">
+              <h5 class="card-title text-center">Medical Store</h5>
+             
+            </div>
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card11">
+            <a href="" class="link11 nav-link">
+            <img
+            src="image/svg/tailor.svg"
+            class="card-img-top img11"
+            alt="..." 
+          />
+            <div class="card-body">
+              <h5 class="card-title text-center">Tailor</h5>
+             
+            </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>
 
 
-  <!-- team  -->
+   
+    <!-- lodge-section  -->
+    <div class="container">
+      <div class="lodge">
+        <h1 class="text-center">Lodg<span id="dot1">e</span> <i class="fas fa-bed"></i> </h1>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card">
+            <img
+              src="image/Lodge/pexels-burst-545012.jpg"
+              class="card-img-top"
+              alt="..." style="height: 210px"
+            />
+            <div class="card-body">
+             <a href="#" class=" link11"><h5 class="card-title">Ansar Complex</h5></a> 
+              <p class="card-text">
+                
+              </p>
+              
+              <a href="tel:+919246147999" class="btn btn-outline-primary" style="padding-right:30px; padding-left: 30px;"><i class="fas fa-phone-alt"></i> Call</a>
+              <a href="https://goo.gl/maps/9Qt4jfnc1ujRwaJR8" class="btn btn-success" style="margin-left: 40px;"><i class="fas fa-directions"></i> Direction</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="image/Lodge/pexels-jean-van-der-meulen-1454806.jpg"
+              class="card-img-top" style="height: 210px"
+              alt="..."
+            />
+            <div class="card-body">
+             <a href="#" class=" link11"><h5 class="card-title">Ali Manzil</h5></a> 
+              <p class="card-text">
+                
+              </p>
+              <a href="tel:+919246147999" class="btn btn-outline-primary" style="padding-right:30px; padding-left: 30px;"><i class="fas fa-phone-alt"></i> Call</a>
+              <a href="https://goo.gl/maps/9Qt4jfnc1ujRwaJR8" class="btn btn-success" style="margin-left: 40px;"><i class="fas fa-directions"></i> Direction</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="image/Lodge/bedroom-5664221_1920.jpg"
+              class="card-img-top"
+              alt="..." style="height: 210px"
+            />
+            <div class="card-body">
+              <a href="#" class=" link11"><h5 class="card-title">Zaffar Lodge</h5></a> 
+              <p class="card-text">
+                
+              </p>
+              <a href="tel:+919246147999" class="btn btn-outline-primary" style="padding-right:30px; padding-left: 30px;"><i class="fas fa-phone-alt"></i> Call</a>
+              <a href="https://goo.gl/maps/9Qt4jfnc1ujRwaJR8" class="btn btn-success" style="margin-left: 40px;"><i class="fas fa-directions"></i> Direction</a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+</div>
+
+  <center>
+    <a href="lodge.html">
+  <button type="button" class="btn btn-warning btn-lg mt-5 btn11">Load More <i class="fas fa-angle-double-right"></i></button>
+</a>
+</center>
 
 
+
+    <!-- Mess  -->
+
+    <div class="container">
+      <div class="lodge">
+        <h1 class="text-center">Mes<span id="dot1">s</span> <i class="fas fa-utensils"></i> </h1>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card">
+            <img
+              src="image/Mess/pexels-chan-walrus-958545.jpg"
+              class="card-img-top"
+              alt="..." style="height: 210px"
+            />
+            <div class="card-body">
+             <a href="mess.html" class=" link11"><h5 class="card-title">Wasim Mess</h5></a> 
+              <p class="card-text">
+                
+              </p>
+              <a href="tel:+919246147999" class="btn btn-outline-primary" style="padding-right:30px; padding-left: 30px;"><i class="fas fa-phone-alt"></i> Call</a>
+              <a href="https://goo.gl/maps/9Qt4jfnc1ujRwaJR8" class="btn btn-success" style="margin-left: 40px;"><i class="fas fa-directions"></i> Direction</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="image/Mess/pexels-pixabay-461198.jpg"
+              class="card-img-top"
+              alt="..." style="height: 210px"
+            />
+            <div class="card-body">
+             <a href="#" class=" link11"><h5 class="card-title">Butter Chicken Mess</h5></a> 
+              <p class="card-text">
+                
+              </p>
+              <a href="tel:+919246147999" class="btn btn-outline-primary" style="padding-right:30px; padding-left: 30px;"><i class="fas fa-phone-alt"></i> Call</a>
+              <a href="https://goo.gl/maps/9Qt4jfnc1ujRwaJR8" class="btn btn-success" style="margin-left: 40px;"><i class="fas fa-directions"></i> Direction</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="image/Mess/breakfast-1804436_1920.jpg"
+              class="card-img-top"
+              alt="..." style="height: 210px"
+            />
+            <div class="card-body">
+             <a href="#" class=" link11"><h5 class="card-title">Biryani cafe</h5></a> 
+              <p class="card-text">
+                
+              </p>
+              <a href="tel:+919246147999" class="btn btn-outline-primary" style="padding-right:30px; padding-left: 30px;"><i class="fas fa-phone-alt"></i> Call</a>
+              <a href="https://goo.gl/maps/9Qt4jfnc1ujRwaJR8" class="btn btn-success" style="margin-left: 40px;"><i class="fas fa-directions"></i> Direction</a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <center>
+      <a href="mess.html">
+      <button type="button" class="btn btn-warning btn-lg mt-5 btn11">Load More <i class="fas fa-angle-double-right"></i></button>
+    </center>
+  </a>
+  
+  
+  
+
+   <!-- Water -->
+
+   <div class="container">
+    <div class="lodge">
+      <h1 class="text-center">Wate<span id="dot1">r</span> <i class="fas fa-tint"></i> </h1>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card">
+          <img
+            src="image/Mess/pexels-chan-walrus-958545.jpg"
+            class="card-img-top"
+            alt="..." style="height: 210px"
+          />
+          <div class="card-body">
+           <a href="#" class=" link11"><h5 class="card-title">Wasim Mess</h5></a> 
+            <p class="card-text">
+              
+            </p>
+            <a href="tel:+919246147999" class="btn btn-outline-primary" style="padding-right:30px; padding-left: 30px;"><i class="fas fa-phone-alt"></i> Call</a>
+              <a href="https://goo.gl/maps/9Qt4jfnc1ujRwaJR8" class="btn btn-success" style="margin-left: 40px;"><i class="fas fa-directions"></i> Direction</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img
+            src="image/Mess/pexels-pixabay-461198.jpg"
+            class="card-img-top"
+            alt="..." style="height: 210px"
+          />
+          <div class="card-body">
+           <a href="#" class=" link11"><h5 class="card-title">Butter Chicken Mess</h5></a> 
+            <p class="card-text">
+              
+            </p>
+            <a href="tel:+919246147999" class="btn btn-outline-primary" style="padding-right:30px; padding-left: 30px;"><i class="fas fa-phone-alt"></i> Call</a>
+              <a href="https://goo.gl/maps/9Qt4jfnc1ujRwaJR8" class="btn btn-success" style="margin-left: 40px;"><i class="fas fa-directions"></i> Direction</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img
+            src="image/Mess/breakfast-1804436_1920.jpg"
+            class="card-img-top"
+            alt="..." style="height: 210px"
+          />
+          <div class="card-body">
+           <a href="#" class=" link11"><h5 class="card-title">Biryani cafe</h5></a> 
+            <p class="card-text">
+              
+            </p>
+            <a href="tel:+919246147999" class="btn btn-outline-primary" style="padding-right:30px; padding-left: 30px;"><i class="fas fa-phone-alt"></i> Call</a>
+              <a href="https://goo.gl/maps/9Qt4jfnc1ujRwaJR8" class="btn btn-success" style="margin-left: 40px;"><i class="fas fa-directions"></i> Direction</a>
+          </div>
+        </div>
+      </div>
       
+    </div>
+  </div>
+  <center>
+    <button type="button" class="btn btn-warning btn-lg mt-5 mb-5 btn11">Load More <i class="fas fa-angle-double-right"></i></button>
+  </center>
+
+    <!-- Call to Action -->
+
+    <section class="colored-section" id="cta">
+
+      <div class="container-fluid">
+  
+        <h3 class="big-heading">Find Your Lodge And Mess Today.</h3>
+        <button class="download-button btn btn-lg btn-dark" type="button"><i class="fab fa-apple"></i> Download</button>
+        <button class="download-button btn btn-lg btn-light" type="button"><i class="fab fa-google-play"></i> Download</button>
+      </div>
+    </section>
+    <!-- stationery-->
+    <div class="container">
+      <div class="lodge">
+        <h1 class="text-center">Stationer<span id="dot1">y</span> <i class="fas fa-store"></i></h1>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card">
+            <img
+              src="image/Lodge/pexels-burst-545012.jpg"
+              class="card-img-top"
+              alt="..." style="height: 210px"
+            />
+            <div class="card-body">
+             <a href="#" class=" link11"><h5 class="card-title">Ansar Complex</h5></a> 
+              <p class="card-text">
+                
+              </p>
+              <a href="tel:+919246147999" class="btn btn-outline-primary" style="padding-right:30px; padding-left: 30px;"><i class="fas fa-phone-alt"></i> Call</a>
+              <a href="https://goo.gl/maps/9Qt4jfnc1ujRwaJR8" class="btn btn-success" style="margin-left: 40px;"><i class="fas fa-directions"></i> Direction</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="image/Lodge/pexels-jean-van-der-meulen-1454806.jpg"
+              class="card-img-top"
+              alt="..." style="height: 210px"
+            />
+            <div class="card-body">
+             <a href="#" class=" link11"><h5 class="card-title">Ali Manzil</h5></a> 
+              <p class="card-text">
+                
+              </p>
+              <a href="tel:+919246147999" class="btn btn-outline-primary" style="padding-right:30px; padding-left: 30px;"><i class="fas fa-phone-alt"></i> Call</a>
+              <a href="https://goo.gl/maps/9Qt4jfnc1ujRwaJR8" class="btn btn-success" style="margin-left: 40px;"><i class="fas fa-directions"></i> Direction</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="image/Lodge/bedroom-5664221_1920.jpg"
+              class="card-img-top"
+              alt="..." style="height: 210px"
+            />
+            <div class="card-body">
+              <a href="#" class=" link11"><h5 class="card-title">Zaffar Lodge</h5></a> 
+              <p class="card-text">
+                
+              </p>
+              <a href="tel:+919246147999" class="btn btn-outline-primary" style="padding-right:30px; padding-left: 30px;"><i class="fas fa-phone-alt"></i> Call</a>
+              <a href="https://goo.gl/maps/9Qt4jfnc1ujRwaJR8" class="btn btn-success" style="margin-left: 40px;"><i class="fas fa-directions"></i> Direction</a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+</div>
+<center>
+  <button type="button" class="btn btn-warning btn-lg mt-5 btn11">Load More <i class="fas fa-angle-double-right"></i></button>
+</center>
+
+  
+      <!-- hotel -->
       
+    <div class="container">
+      <div class="lodge">
+        <h1 class="text-center">Hote<span id="dot1">l</span> <i class="fas fa-hamburger"></i></i> </h1>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card">
+            <img
+              src="image/Mess/pexels-chan-walrus-958545.jpg"
+              class="card-img-top"
+              alt="..." style="height: 210px"
+            />
+            <div class="card-body">
+             <a href="#" class=" link11"><h5 class="card-title">Wasim Mess</h5></a> 
+              <p class="card-text">
+                
+              </p>
+              <a href="tel:+919246147999" class="btn btn-outline-primary" style="padding-right:30px; padding-left: 30px;"><i class="fas fa-phone-alt"></i> Call</a>
+              <a href="https://goo.gl/maps/9Qt4jfnc1ujRwaJR8" class="btn btn-success" style="margin-left: 40px;"><i class="fas fa-directions"></i> Direction</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="image/Mess/pexels-pixabay-461198.jpg"
+              class="card-img-top"
+              alt="..." style="height: 210px"
+            />
+            <div class="card-body">
+             <a href="#" class=" link11"><h5 class="card-title">Butter Chicken Mess</h5></a> 
+              <p class="card-text">
+                
+              </p>
+              <a href="tel:+919246147999" class="btn btn-outline-primary" style="padding-right:30px; padding-left: 30px;"><i class="fas fa-phone-alt"></i> Call</a>
+              <a href="https://goo.gl/maps/9Qt4jfnc1ujRwaJR8" class="btn btn-success" style="margin-left: 40px;"><i class="fas fa-directions"></i> Direction</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="image/Mess/breakfast-1804436_1920.jpg"
+              class="card-img-top"
+              alt="..." style="height: 210px"
+            />
+            <div class="card-body">
+             <a href="#" class=" link11"><h5 class="card-title">Biryani cafe</h5></a> 
+              <p class="card-text">
+                
+              </p>
+              <a href="tel:+919246147999" class="btn btn-outline-primary" style="padding-right:30px; padding-left: 30px;"><i class="fas fa-phone-alt"></i> Call</a>
+              <a href="https://goo.gl/maps/9Qt4jfnc1ujRwaJR8" class="btn btn-success" style="margin-left: 40px;"><i class="fas fa-directions"></i> Direction</a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <center>
+      <button type="button" class="btn btn-warning btn-lg mt-5 btn11">Load More <i class="fas fa-angle-double-right"></i></button>
+    </center>
+ <!-- Buy-->
+ <div class="container">
+  <div class="lodge">
+    <h1 class="text-center">Bu<span id="dot1">y</span> <i class="fas fa-shopping-cart"></i></h1>
+  </div>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card">
+        <img
+          src="image/Lodge/pexels-burst-545012.jpg"
+          class="card-img-top"
+          alt="..." style="height: 210px"
+        />
+        <div class="card-body">
+         <a href="#" class=" link11"><h5 class="card-title">Ansar Complex</h5></a> 
+          <p class="card-text">
+            
+          </p>
+         <a href="tel:+919246147999" class="btn btn-outline-primary" style="padding-right:30px; padding-left: 30px;"><i class="fas fa-phone-alt"></i> Call</a>
+              <a href="https://goo.gl/maps/9Qt4jfnc1ujRwaJR8" class="btn btn-success" style="margin-left: 40px;"><i class="fas fa-directions"></i> Direction</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img
+          src="image/Lodge/pexels-jean-van-der-meulen-1454806.jpg"
+          class="card-img-top"
+          alt="..." style="height: 210px"
+        />
+        <div class="card-body">
+         <a href="#" class=" link11"><h5 class="card-title">Ali Manzil</h5></a> 
+          <p class="card-text">
+            
+          </p>
+         <a href="tel:+919246147999" class="btn btn-outline-primary" style="padding-right:30px; padding-left: 30px;"><i class="fas fa-phone-alt"></i> Call</a>
+              <a href="https://goo.gl/maps/9Qt4jfnc1ujRwaJR8" class="btn btn-success" style="margin-left: 40px;"><i class="fas fa-directions"></i> Direction</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img
+          src="image/Lodge/bedroom-5664221_1920.jpg"
+          class="card-img-top"
+          alt="..." style="height: 210px"
+        />
+        <div class="card-body">
+          <a href="#" class=" link11"><h5 class="card-title">Zaffar Lodge</h5></a> 
+          <p class="card-text">
+            
+          </p>
+         <a href="tel:+919246147999" class="btn btn-outline-primary" style="padding-right:30px; padding-left: 30px;"><i class="fas fa-phone-alt"></i> Call</a>
+              <a href="https://goo.gl/maps/9Qt4jfnc1ujRwaJR8" class="btn btn-success" style="margin-left: 40px;"><i class="fas fa-directions"></i> Direction</a>
+        </div>
+      </div>
+    </div>
     
+  </div>
+</div>
+</div>
+   
+<center>
+  <button type="button" class="btn btn-warning btn-primary btn-lg mt-5 mb-5 btn11">Load More <i class="fas fa-angle-double-right"></i></button>
+</center>
+
+
+
 <!-- cta  -->
+
 <section class="deneb_cta">
 	<div class="container">
-		<div class="cta_wrapper cta11">
+		<div class="cta_wrapper">
 			<div class="row align-items-center">
 				<div class="col-lg-7">
 					<div class="cta_content">
@@ -324,9 +1097,9 @@
 	</div>
 </section>
 </section>
-<!-- footer-->
+<!-- footer -->
 <footer class="deneb_footer">
-	<div class="widget_wrapper" style="background-image: url(http://demo.tortoizthemes.com/deneb-html/deneb-ltr/assets/images/footer_bg.png);">
+	<div class="widget_wrapper">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-4 col-md-6 col-12">
@@ -375,7 +1148,7 @@
 									<i class="fas fa-phone-alt"></i>
 								</div>
 								<div class="info">
-									<p><a href="tel:+919246147999">1800-121-3637</a></p>
+									<p><a href="tel:+919246147999">+91 9102880561</a></p>
 
 								</div>
 							</div>
@@ -415,9 +1188,13 @@
 		</div>
 	</div>
 </footer>
-   <!-- Option 1: Bootstrap Bundle with Popper -->
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-   integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
-</body>
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+
+  </body>
 </html>
