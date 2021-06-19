@@ -136,6 +136,15 @@ a{
  footer  a:hover{
      color: #23d3d3 !important;
  }
+ .text-color a{
+    color: #23d3d3 !important;
+ }
+ .text-color{
+    color: #23d3d3 !important;
+ }
+ .text-color i{
+    color: #23d3d3;
+ }
  footer .widget_title h2 a{
     
      font-family: 'Poppins', sans-serif;
@@ -480,4 +489,10 @@ a {
         .add2{
             margin: 0px 10px;
         }
-        }
+        
+    }
+   .btn-p{
+       padding: 11px 0 10px 0;
+   }
+
+ 
